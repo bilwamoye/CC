@@ -5,8 +5,9 @@ int main()
 {
 	char str[5];
 	int i;
-	cout<<"Enter a string"<<endl;
+	cout<<"Enter a string: ";
 	cin>>str;
+	cout<<endl;
 	for(i=0;i<5;i++)
 	{
 	 if((str[i]=='a')|| (str[i]=='c'))
