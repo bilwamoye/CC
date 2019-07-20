@@ -45,7 +45,7 @@ k=k+1;
                 {
 
 
-                cout<<str[i]<<" "<<"is a identifier"<<endl;
+                cout<<str[i]<<" "<<"is an identifier"<<endl;
                 continue;
                 }
                     else if (str[i]==constant[j])
