@@ -1,28 +1,71 @@
 #include<iostream>
-#include<string.h>
+#include<cstring>
 using namespace std;
 int main()
 {
-	char str[5];
-	int i;
-	cout<<"Enter a string: ";
-	cin>>str;
-	cout<<endl;
-	for(i=0;i<5;i++)
-	{
-	 if((str[i]=='a')|| (str[i]=='c'))
-	 {
-		 cout<<str[i]<<" "<<"is a character"<<endl;
-	 }
-	 else if((str[i]=='1')||(str[i]=='2')||(str[i]=='3'))
-	 {
-		 cout<<str[i]<<" "<<"is a number"<<endl;
-	 }
-	 else
-	 {
-		 continue;
-	 }
-	 
+	string str[10],delimeter[6]={"(",")","=","/0"},keyword[6]={"if","else","while","/0"},constant[6]={"1","2","3","/0"},identifier[6]={"x","y","z","/0"};
+
+	int i,j,k=0,n;
+cout<<"Enter string length"<<endl;
+cin>>n;
+cout<<"Enter a string: ";
+
+   for(i=0;i<n;i++)
+ {
+
+cin>>str[i];
+k=k+1;
  }
-	
+
+	for(i=0;i<n;i++)
+	{
+
+	    for(j=0;j<n;j++)
+        {
+
+
+
+            if((str[i]==keyword[j]) || (str[i]==delimeter[j]) || (str[i]==identifier[j]) || (str[i]==constant[j]))
+                {
+                if(str[i]==keyword[j])
+                {
+
+
+                cout<<str[i]<<" "<<"is a keyword"<<endl;
+                continue;
+                }
+                 else if (str[i]==delimeter[j])
+                {
+
+
+                cout<<str[i]<<" "<<"is a delimeter"<<endl;
+                continue;
+                }
+                  else if(str[i]==identifier[j])
+                {
+
+
+                cout<<str[i]<<" "<<"is a identifier"<<endl;
+                continue;
+                }
+                    else if (str[i]==constant[j])
+                {
+
+
+                cout<<str[i]<<" "<<"is a constant"<<endl;
+                continue;
+                }
+                }
+            else
+                {
+
+
+            //    cout<<"invalid"<<endl;
+                               continue;
+                }
+
+        }
+ }
+
 }
+
