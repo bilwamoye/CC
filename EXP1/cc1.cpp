@@ -60,7 +60,6 @@ k=k+1;
                 {
 
 
-            //    cout<<"invalid"<<endl;
                                continue;
                 }
 
